@@ -91,7 +91,7 @@ programa
 			jogo[0][2]=="O" e jogo[1][1]=="O" e jogo[2][0]=="O")
 			
 			{
-				escreva("\njogador um venceu!\n")
+				escreva("\njogador dois venceu!\n")
 				pare
 			}
 		}
@@ -103,7 +103,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2006; 
+ * @POSICAO-CURSOR = 2522; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {jogo, 6, 9, 4};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
