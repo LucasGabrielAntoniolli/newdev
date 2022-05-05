@@ -18,7 +18,16 @@ programa
 			escreva("\nDigite a coluna")
 			leia(coluna)
 
-			se(jogo[linha][coluna] == ""){jogo[linha][coluna] = "X"}
+			se(jogo[linha][coluna] == ""){
+				jogo[linha][coluna] = "X"
+				
+				}senao{ limpa()
+				escreva("\nPosição Ocupada!")
+				escreva("\nDigite a linha!")
+				leia(linha)
+				escreva("\nDigite a coluna")
+				leia(coluna)
+			}
 
 			limpa()
 
@@ -49,7 +58,16 @@ programa
 			escreva("\nDigite a coluna")
 			leia(coluna)
 
-			se(jogo[linha][coluna] == ""){jogo[linha][coluna] = "O"}
+			se(jogo[linha][coluna] == ""){
+				jogo[linha][coluna] = "O"
+				
+				}senao{ limpa()
+				escreva("\nPosição Ocupada!")
+				escreva("\nDigite a linha!")
+				leia(linha)
+				escreva("\nDigite a coluna")
+				leia(coluna)
+			}
 
 			limpa()
 
@@ -75,7 +93,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1253; 
+ * @POSICAO-CURSOR = 518; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
