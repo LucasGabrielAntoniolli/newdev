@@ -28,16 +28,16 @@ programa
 			escreva("\nDigite a coluna")
 			leia(coluna)
 
-			se(jogo[linha][coluna] == " "){
-				jogo[linha][coluna] = "X"
+			enquanto(jogo[linha][coluna] == "X" ou jogo[linha][coluna] == "O"){
 				
-				}senao{ 
-				escreva("\nPosição Ocupada!")
+				escreva("\nPosição Ocupada!\n")
 				escreva("\nDigite a linha!")
 				leia(linha)
 				escreva("\nDigite a coluna")
 				leia(coluna)
 			}
+
+			jogo[linha][coluna] = "X"
 
 			limpa()
 
@@ -68,16 +68,16 @@ programa
 			escreva("\nDigite a coluna")
 			leia(coluna)
 
-			se(jogo[linha][coluna] == " "){
-				jogo[linha][coluna] = "O"
+			enquanto(jogo[linha][coluna] == "X" ou jogo[linha][coluna] == "O"){
 				
-				}senao{ 
-				escreva("\nPosição Ocupada!")
+				escreva("\nPosição Ocupada!\n")
 				escreva("\nDigite a linha!")
 				leia(linha)
 				escreva("\nDigite a coluna")
 				leia(coluna)
 			}
+
+			jogo[linha][coluna] = "O"
 
 			limpa()
 
@@ -103,9 +103,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1768; 
+ * @POSICAO-CURSOR = 2006; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {jogo, 6, 9, 4};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
