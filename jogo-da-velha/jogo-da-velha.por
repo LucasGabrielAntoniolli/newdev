@@ -21,7 +21,7 @@ programa
 			se(jogo[linha][coluna] == ""){
 				jogo[linha][coluna] = "X"
 				
-				}senao{ limpa()
+				}senao{ 
 				escreva("\nPosição Ocupada!")
 				escreva("\nDigite a linha!")
 				leia(linha)
@@ -61,7 +61,7 @@ programa
 			se(jogo[linha][coluna] == ""){
 				jogo[linha][coluna] = "O"
 				
-				}senao{ limpa()
+				}senao{ 
 				escreva("\nPosição Ocupada!")
 				escreva("\nDigite a linha!")
 				leia(linha)
@@ -93,7 +93,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 518; 
+ * @POSICAO-CURSOR = 1645; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
