@@ -36,7 +36,7 @@ programa
 
 				para(inteiro i=0; i < 200; i++){
 					se(veiculo[i] == nome)
-					escreva("\n",nome, "  ",numeros[i][3])
+					escreva("\nNome: ",veiculo[i]," Saldo: ",numeros[i][2])
 				}
 			
 			pare
@@ -44,7 +44,7 @@ programa
 			caso 3: 
 
 				para(inteiro i=0; i < 200; i++){
-					escreva("\nNome: ",veiculo[i]," Saldo: ",numeros[i][3])
+					escreva("\nNome: ",veiculo[i]," Saldo: ",numeros[i][2])
 				}
 			
 			pare
@@ -70,14 +70,14 @@ programa
 				escolha(opc){
 					caso 1:
 
-						numeros[indice][2] += quantos
-						numeros[indice][3] = numeros[indice][1] - numeros[indice][2]
+						numeros[indice][1] += quantos
+						numeros[indice][2] = numeros[indice][0] - numeros[indice][1]
 					
 					pare
 					caso 2:
 
-						numeros[indice][1] += quantos
-						numeros[indice][3] = numeros[indice][1] - numeros[indice][2] 
+						numeros[indice][0] += quantos
+						numeros[indice][2] = numeros[indice][0] - numeros[indice][1] 
 					
 					pare
 				}
@@ -97,9 +97,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1591; 
+ * @POSICAO-CURSOR = 1735; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {indice, 6, 27, 6}-{veiculo, 9, 9, 7};
+ * @SIMBOLOS-INSPECIONADOS = {numeros, 6, 10, 7}-{indice, 6, 27, 6}-{veiculo, 9, 9, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
