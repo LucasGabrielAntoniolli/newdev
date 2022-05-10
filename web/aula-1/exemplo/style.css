@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+
+section {
+  margin: 9px 5px 3px 2px;
+  border: 2px dashed #0e3a0e;
+  padding: 5px;
+  height: 100px;
+  width: 100px;
+}
+
+button {
+  color: #ffffff;
+  background-color: black;
+}
+
+#botão {
+  color: aqua;
+}
+
+.butão {
+  color: blueviolet !important;
+}

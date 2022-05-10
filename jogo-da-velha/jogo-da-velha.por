@@ -42,13 +42,13 @@ programa
 			limpa()
 
 			se(jogo[0][0]=="X" e jogo[0][1]=="X" e jogo[0][2]=="X" ou
-			jogo[1][0]=="X" e jogo[1][1]=="X" e jogo[1][2]=="X" ou 
-			jogo[2][0]=="X" e jogo[2][1]=="X" e jogo[2][2]=="X" ou
-			jogo[0][0]=="X" e jogo[1][0]=="X" e jogo[2][0]=="X"ou
-			jogo[0][1]=="X" e jogo[1][1]=="X" e jogo[2][1]=="X" ou
-			jogo[0][0]=="X" e jogo[1][1]=="X" e jogo[2][2]=="X" ou
-			jogo[0][0]=="X" e jogo[1][1]=="X" e jogo[2][2]=="X" ou
-			jogo[0][2]=="X" e jogo[1][1]=="X" e jogo[2][0]=="X")
+				jogo[1][0]=="X" e jogo[1][1]=="X" e jogo[1][2]=="X" ou 
+				jogo[2][0]=="X" e jogo[2][1]=="X" e jogo[2][2]=="X" ou
+				jogo[0][0]=="X" e jogo[1][0]=="X" e jogo[2][0]=="X"ou
+				jogo[0][1]=="X" e jogo[1][1]=="X" e jogo[2][1]=="X" ou
+				jogo[0][0]=="X" e jogo[1][1]=="X" e jogo[2][2]=="X" ou
+				jogo[0][0]=="X" e jogo[1][1]=="X" e jogo[2][2]=="X" ou
+				zjogo[0][2]=="X" e jogo[1][1]=="X" e jogo[2][0]=="X")
 			
 			{
 				escreva("\njogador um venceu!\n")
@@ -82,16 +82,16 @@ programa
 			limpa()
 
 			se(jogo[0][0]=="O" e jogo[0][1]=="O" e jogo[0][2]=="O" ou
-			jogo[1][0]=="O" e jogo[1][1]=="O" e jogo[1][2]=="O" ou 
-			jogo[2][0]=="O" e jogo[2][1]=="O" e jogo[2][2]=="O" ou
-			jogo[0][0]=="O" e jogo[1][0]=="O" e jogo[2][0]=="O"ou
-			jogo[0][1]=="O" e jogo[1][1]=="O" e jogo[2][1]=="O" ou
-			jogo[0][0]=="O" e jogo[1][1]=="O" e jogo[2][2]=="O" ou
-			jogo[0][0]=="O" e jogo[1][1]=="O" e jogo[2][2]=="O" ou
-			jogo[0][2]=="O" e jogo[1][1]=="O" e jogo[2][0]=="O")
+				jogo[1][0]=="O" e jogo[1][1]=="O" e jogo[1][2]=="O" ou 
+				jogo[2][0]=="O" e jogo[2][1]=="O" e jogo[2][2]=="O" ou
+				jogo[0][0]=="O" e jogo[1][0]=="O" e jogo[2][0]=="O"ou
+				jogo[0][1]=="O" e jogo[1][1]=="O" e jogo[2][1]=="O" ou
+				jogo[0][0]=="O" e jogo[1][1]=="O" e jogo[2][2]=="O" ou
+				jogo[0][0]=="O" e jogo[1][1]=="O" e jogo[2][2]=="O" ou
+				jogo[0][2]=="O" e jogo[1][1]=="O" e jogo[2][0]=="O")
 			
 			{
-				escreva("\njogador dois venceu!\n")
+				escreva("\njogador dois  venceu!\n")
 				pare
 			}
 		}
@@ -103,7 +103,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2522; 
+ * @POSICAO-CURSOR = 1301; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {jogo, 6, 9, 4};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
