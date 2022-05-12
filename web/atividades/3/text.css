@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tudo {
+  border: 1px solid #0720fd;
+  position: absolute;
+  width: 447px;
+  height: 629px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-family: 'Jura', sans-serif;
+}
+
+.title {
+}
+
+.contem {
+}
+
+.botão {
+}

@@ -1,0 +1,79 @@
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bola {
+  position: absolute;
+
+  width: 8rem;
+  height: 8rem;
+
+  z-index: 5;
+  background: #ff0000;
+  border-radius: 5rem;
+}
+
+.verde1 {
+  position: absolute;
+
+  height: 19.2rem;
+  width: 19rem;
+
+  border-radius: 0rem;
+  z-index: 4;
+  background: #043c2e;
+}
+
+.verde2 {
+  position: absolute;
+
+  height: 32.1rem;
+  width: 33.1rem;
+
+  border-radius: 0rem;
+  z-index: 3;
+  background: #128d0f;
+}
+
+.cinza {
+  position: absolute;
+  background: #bdbbbb;
+
+  height: 42.8rem;
+  width: 44.3rem;
+
+  border-radius: 0rem;
+  z-index: 2;
+}
+
+.rosa {
+  position: absolute;
+
+  height: 55.8rem;
+  width: 59rem;
+
+  border-radius: 0rem;
+  background: #ffa5a5;
+  z-index: 1;
+}
+
+.bola,
+.verde1,
+.verde2,
+.cinza,
+.rosa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
