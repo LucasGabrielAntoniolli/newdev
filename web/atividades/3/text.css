@@ -1,3 +1,7 @@
+:root {
+  font-size: 62.5%;
+}
+
 html,
 body {
   height: 100%;
@@ -7,26 +11,82 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2.4rem;
 }
 
 .tudo {
   border: 1px solid #0720fd;
   position: absolute;
-  width: 447px;
-  height: 629px;
+  width: 44.7rem;
+  height: 62.9rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+text,
+botão {
+  margin-inline: auto;
 }
 
 .text {
   font-family: 'Jura', sans-serif;
+  height: 400;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
 }
 
 .title {
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  width: 10.6rem;
+  height: 2.8rem;
 }
 
 .contem {
+  font-family: 'Jura', sans-serif;
+  margin-top: 20px;
 }
 
 .botão {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.a {
+  font-family: 'DM sans', sans-serif;
+  padding: 16px 38px 16px 32px;
+  color: white;
+  background: #8d0000;
+  border-radius: 80px;
+  border: 0px;
+  text-transform: uppercase;
+  font: bold;
+  cursor: pointer;
+}
+
+.b {
+  font-family: 'DM sans', sans-serif;
+  padding: 16px 38px 16px 32px;
+  border-radius: 80px;
+  color: white;
+  background: #00856f;
+  border: 0px;
+  text-transform: uppercase;
+  font: bold;
+  cursor: pointer;
+}
+
+.frase {
+  font-family: 'Jura', sans-serif;
+  text-transform: uppercase;
+  width: 320px;
+  height: 17px;
+  font-size: 14px;
+  justify-content: center;
+  font: bold;
 }

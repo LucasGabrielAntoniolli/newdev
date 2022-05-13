@@ -1,0 +1,23 @@
+:root {
+  height: 100;
+}
+
+html,
+body {
+  display: flex;
+  height: 62.5%;
+}
+
+body {
+  margin-top: 20rem;
+  font-size: 1.6rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  width: 60rem;
+  height: 62.9rem;
+
+  background-color: rgba(45, 49, 51, 0.81);
+}
