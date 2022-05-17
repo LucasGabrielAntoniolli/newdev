@@ -1,0 +1,40 @@
+html, body{
+    display: flex;
+    width: 100%;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo{
+    background-color: rgba(45, 49, 51, 0.81);
+    position: absolute;
+    width: 600px;
+    height: 629px;
+    margin-top: 800px;
+}
+
+iframe{
+    margin-top: 70px;
+    left: 26px;
+    position: absolute;
+    width: 549px;
+    height: 532px;
+
+    background: #C4C4C4;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Jura', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 4em;
+    font-weight: 700;
+    position: relative;
+    left: 4.5%;
+}

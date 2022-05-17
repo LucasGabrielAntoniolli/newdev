@@ -1,5 +1,6 @@
-:root {
-  font-size: 62.5%;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -11,82 +12,71 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
 }
 
 .tudo {
   border: 1px solid #0720fd;
-  position: absolute;
-  width: 44.7rem;
-  height: 62.9rem;
+  width: 447px;
+  height: 629px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-text,
-botão {
-  margin-inline: auto;
+  justify-content: center;
 }
 
 .text {
+  position: absolute;
   font-family: 'Jura', sans-serif;
-  height: 400;
-  font-size: 2.4rem;
-  line-height: 2.8rem;
+  font-size: 24px;
+  width: 361px;
+  height: 389px;
+  font-weight: 500;
 }
 
 .title {
-  font-family: 'Jura', sans-serif;
+  margin-top: 19px;
+  text-align: center;
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 2.8rem;
-  width: 10.6rem;
-  height: 2.8rem;
+  color: black;
 }
 
 .contem {
-  font-family: 'Jura', sans-serif;
-  margin-top: 20px;
+  margin-top: 63px;
+  text-align: center;
+  color: black;
 }
 
 .botão {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  cursor: pointer;
+  position: relative;
+  margin-top: 467px;
 }
 
 .a {
-  font-family: 'DM sans', sans-serif;
-  padding: 16px 38px 16px 32px;
-  color: white;
+  width: 170px;
+  height: 50px;
+  color: #ffffff;
+  font-family: 'DM Sans';
+  font-weight: bold;
+
   background: #8d0000;
   border-radius: 80px;
-  border: 0px;
-  text-transform: uppercase;
-  font: bold;
-  cursor: pointer;
+  border: 0px solid #ffffff;
 }
 
 .b {
-  font-family: 'DM sans', sans-serif;
-  padding: 16px 38px 16px 32px;
-  border-radius: 80px;
-  color: white;
+  width: 170px;
+  height: 50px;
+  color: #ffffff;
+  font-family: 'DM Sans';
+  font-weight: bold;
+
   background: #00856f;
-  border: 0px;
-  text-transform: uppercase;
-  font: bold;
-  cursor: pointer;
+  border-radius: 80px;
+  border: 0px solid #ffffff;
 }
 
 .frase {
-  font-family: 'Jura', sans-serif;
-  text-transform: uppercase;
-  width: 320px;
-  height: 17px;
+  position: absolute;
+  font-family: 'jura', sans-serif;
+  margin-top: 563px;
   font-size: 14px;
-  justify-content: center;
-  font: bold;
+  color: black;
 }

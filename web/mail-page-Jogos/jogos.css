@@ -1,0 +1,25 @@
+* {
+}
+
+html,
+body {
+  display: flex;
+  height: 100%;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #1b1717;
+}
+
+.container {
+  width: 1325px;
+  height: 1495px;
+
+  background: #3c3d47;
+  border-radius: 0px 0px 80px 0px;
+}
