@@ -52,18 +52,68 @@ h1 {
   padding-top: 2rem;
 }
 
+.circulo {
+  background-color: #ff0000;
+  border: 0.8rem solid #a97e0e;
+  box-sizing: border-box;
+  width: 28.4rem;
+  height: 29.1rem;
+  border-radius: 17rem 17rem 17rem 17rem;
+  position: absolute;
+  padding-top: 4rem;
+  margin-top: 8rem;
+  margin-left: 115rem;
+}
+
+.circulo p {
+  font-family: 'Rubik Wet Paint';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 87px;
+  line-height: 103px;
+  text-align: center;
+  color: #f5b208;
+}
+
 main {
-  height: calc(100% - 30.5rem);
+  height: 152.1rem;
   flex-direction: column;
 }
 
 section {
   display: flex;
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 
 img {
   border: 10px solid #0f4a06;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+h3,
+h4 {
+  text-align: center;
+  font-family: 'David Libre';
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 7.5rem;
+  color: black;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h4 {
+  font-size: 6rem;
+  color: #740202;
+  text-decoration: line-through;
+}
+
+article {
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -91,4 +141,17 @@ h2 {
 footer p {
   color: #861313;
   padding-right: 8rem;
+}
+
+.direitos {
+  height: 7rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.direitos p {
+  color: rgba(255, 255, 255, 0.623);
+  font-size: 3rem;
+  margin-top: 2rem;
 }
