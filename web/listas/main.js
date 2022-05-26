@@ -23,8 +23,14 @@ function addMessage(event) {
     password:inputsenha.Value,
   }
 
-  messages.push(message)
+  if(messages < 3){
+   messages.push(message)
+  } else{
+    // chama o alert do browser
+    alert('O vetor está cheio');
+  }
 
+  // pegando o formulário e utilizando um metodo que é o reset
   document.getElementById('formulario').reset();
   console.log('...', message);
   console.log('...', messages);
