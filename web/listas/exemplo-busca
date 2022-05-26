@@ -1,0 +1,21 @@
+// Buscando Elemnto dentro da página html
+// getElementById: busca o elemento pelo ID
+const buttonsendmessege = document.getElementById('buttonsendmessege')
+console.log('buttonsendmessege', buttonsendmessege)
+
+// Buscando pelo id
+// o querySelector: retorna o primeiro elemento que encontrar
+// querySelectorAll: retorna um array
+// querySelector
+const texto = document.querySelectorAll('#texto')
+console.log('texto', texto)
+
+// Buscando pela tag
+const input = document.querySelectorAll('input')
+console.log('input', input)
+
+// Buscando pela classe
+const social = document.querySelector('.social')
+console.log('social -> ', social)
+// Pegando elemento pelo indice do arrey
+console.log('input email ', input[2])

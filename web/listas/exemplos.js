@@ -52,3 +52,12 @@ const carro = 'gol';
 const NUMERO = 2;
 
 console.log('--->',carro)
+
+carro.andar()
+
+// 4° Método
+const multiplicaValores = () =>{
+  console.log('multiplicaValores', multiplicaValores)
+}
+
+multiplicaValores ()
