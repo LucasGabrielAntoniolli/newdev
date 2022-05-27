@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: 'Tiro Gurmukhi', serif;
+}
+
+#form-message{
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 50%;
+  display: grid;
+}
+
+h1{
+  text-align: center;
+  color: rgb(5, 5, 128);
+}
+
+input{
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgb(184, 182, 182)
+}
+
+label{
+  font-weight: 900;
+  margin: 0.2rem;
+}
+
+#add-button{
+  height: 3rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(184, 182, 182);
+  color: rgb(13, 13, 172);
+  font-weight: 900;
+}
+
+#add-button:hover{
+  background-color: blue;
+  color: aliceblue;
+}
+
+#section-messages{
+  text-align: center;
+  color: rgb(74, 11, 146);
+  padding-top: 3rem;
+}
+
+li{
+  color: rgb(2, 107, 16);
+  border: 1px solid rgb(2, 107, 16);
+}
