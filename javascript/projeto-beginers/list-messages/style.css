@@ -17,6 +17,14 @@ body{
   font-family: 'Tiro Gurmukhi', serif;
 }
 
+.container{
+  width: 70%;
+  height: 90%;
+  margin-top: 5rem;
+  border: 1px solid black;
+  margin-left: 15%;
+}
+
 #form-message{
   padding-top: 2rem;
   margin: 0 auto;
@@ -27,6 +35,7 @@ body{
 h1{
   text-align: center;
   color: rgb(5, 5, 128);
+  margin-top: 2rem;
 }
 
 input{
@@ -64,4 +73,26 @@ label{
 li{
   color: rgb(2, 107, 16);
   border: 1px solid rgb(2, 107, 16);
+}
+
+ul{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+table{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border: 1px solid red;
+}
+
+tr{
+  color: aliceblue;
+  background-color: brown;
+}
+
+i{
+  padding-left: 10px;
 }

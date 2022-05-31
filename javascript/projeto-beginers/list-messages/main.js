@@ -1,5 +1,14 @@
 const buttonAddMessage = document.getElementById('add-button')
 
+const onClickEdit = function (idRecord) {
+  console.log('chamou a função editar', idRecord)
+}
+
+const onClickRemove = function () {
+ console.log('chamou a função remover')
+}
+
+let countRow = 0;
 function addMessage(event) {
   event.preventDefault();
   const inputFrom = document.getElementById('from');
@@ -30,11 +39,12 @@ function addMessage(event) {
     message: textArea.value,
   }
   console.log('...', message)
-
+ 
+  /*
   const sessionMessages = document.getElementById('section-messages');
 
 
-  /* buscamos uma lista dentro da função, e se ela não existir criamos uma */
+  // buscamos uma lista dentro da função, e se ela não existir criamos uma 
 
   let ul = sessionMessages.querySelector('ul')
 
@@ -48,9 +58,63 @@ function addMessage(event) {
   const li = document.createElement('li');
   li.innerHTML = `De: ${message.from} Para: ${message.to} Mensagem: ${message.message}`;
 
-  ul.appendChild(li)
+  ul.appendChild(li)  */
+
+  // Criar uma tabela se ela não existir
+
+  const sessionTable = document.getElementById('section-table');
+
+  let tbody = sessionTable.querySelector('tbody');
+
+ 
+
+  document.getElementById('form-message').reset();
+
+  const tBody = document.getElementById('tbody');
+
+  const tr = document.createElement('tr');
+
+  const tdFrom = document.createElement('td');
+  tdFrom.innerHTML = message.from
+
+  const tdTo = document.createElement('td');
+  tdTo.innerHTML = message.to
+
+  const tdMessage = document.createElement('td');
+  tdMessage.innerHTML = message.message;
+
+  tr.appendChild(tdFrom);
+  tr.appendChild(tdTo);
+  tr.appendChild(tdMessage);
+
+  const tdButtons = document.createElement('td')
+
+  const iconEdit = document.createElement('i')
+  iconEdit.setAttribute('class', 'fa-solid fa-pen-to-square')
+  iconEdit.setAttribute('style', 'cursor:pointer')
+
+  const iconRemove = document.createElement('i')
+  iconRemove.setAttribute('class', 'fas fa-trash')
+  iconRemove.setAttribute('style', 'cursor:pointer')
+
+ 
+  tdButtons.appendChild(iconRemove)
+  tdButtons.appendChild(iconEdit)
+  tr.appendChild(tdButtons);
+  
+  
+
+  //precisamos identificar a linha
+
+  tr.setAttribute('id',countRow)
+  countRow += 1
+
+  iconEdit.setAttribute('onclick', `onClickEdit(${tdButtons.parentNode.id});`)
+  iconRemove.setAttribute('onclick', `onClickRemove()`)
+
+  tBody.appendChild(tr);
 
 }
 
-buttonAddMessage.addEventListener('click', addMessage)
+buttonAddMessage.addEventListener('click', addMessage);
 
