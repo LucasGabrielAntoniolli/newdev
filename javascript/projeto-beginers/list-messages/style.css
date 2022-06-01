@@ -85,14 +85,17 @@ table{
   width: 50%;
   margin: 0 auto;
   margin-top: 2rem;
-  border: 1px solid red;
+  border: 3px solid blue;
+  text-align: center;
 }
 
 tr{
   color: aliceblue;
-  background-color: brown;
+  background-color: blue;
 }
 
 i{
-  padding-left: 10px;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
