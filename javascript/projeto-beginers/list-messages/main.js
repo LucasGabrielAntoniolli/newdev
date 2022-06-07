@@ -1,173 +1,198 @@
-let lineEditingInMoment = null;
+const buttonAddMessage = document.getElementById('add-button');
 
-const buttonAddMessage = document.getElementById('add-button')
+let countRow = 0;
 
-const onClickDowm = function () {
+let editId = '';
+let editCheck = false;
 
-}
+const onClickEdit = (lineEditing) => {
+  // forEach é o método que PERCORRE todos os elementos de um array
+  // lineEditing.childNodes.forEach((valor, index) => {
+  //   console.log(valor);
+  //   console.log(index);
+  // });
 
-const onClickUp = function () {
-  
-}
+  // const fromValue = lineEditing.childNodes[0].innerHTML;
+  // const toValue = lineEditing.childNodes[1].innerHTML;
+  // const messageValue = lineEditing.childNodes[2].innerHTML;
 
-const onClickEdit = function (lineEditing) {
-  lineEditingInMoment = lineEditing;
-  /*
-  const fromValue = lineEditing.childNodes[0].innerHTML;
-  const toValue = lineEditing.childNodes[1].innerHTML;
-  const messageValue = lineEditing.childNodes[2].innerHTML;
-  */
-
-  //desestruturação de arrays
+  // Desestruturação de arrays
   const [from, to, message] = lineEditing.childNodes;
-  
+
+  console.log(from.innerHTML);
+  console.log(to.innerHTML);
+  console.log(message.innerHTML);
 
   document.getElementById('from').value = from.innerHTML;
   document.getElementById('to').value = to.innerHTML;
   document.getElementById('message').innerHTML = message.innerHTML;
 
-  /*
-  lineEditing.childNodes.forEach((valor, index) => {
-    console.log('valor: ', valor)
-    console.log('index: ', index)
-  })*/
+  const tbody = document.getElementById('table-body');
+
+  editId = lineEditing.id;
+  editCheck = true;
 }
 
-const onClickRemove = function (lineRemove) {
-  console.log(lineRemove);
-   lineRemove.remove();
+const onClickRemove = (lineEditing) => {
+  lineEditing.remove();
 }
 
-let countRow = 0;
-function addMessage(event) {
+function onClickMoveDown(row) {
+  const nodes = document.getElementById('table-body').childNodes;
+
+  nodes.forEach((rowItem, index) => {
+    if (rowItem?.id === row.id) {
+      indexRow = index - 1;
+    }
+  });
+        
+  moveLine('down');
+}
+
+function onClickMoveUp(row) {
+  const nodes = document.getElementById('table-body').childNodes;
+
+  nodes.forEach((rowItem, index) => {
+    if (rowItem?.id === row.id) {
+      indexRow = index - 1;
+    }
+  });
+        
+  moveLine('up');
+}
+
+function moveLine(direction) {
+  const rows = document.getElementById('table-body').rows;
+  const parent = rows[indexRow].parentNode;
+
+  if (direction === 'up') {
+    if (indexRow >= 1) {
+      parent.insertBefore(rows[indexRow],rows[indexRow - 1]);
+
+      indexRow--;
+    }
+  }
+
+  if (direction === 'down'){
+    if(indexRow < rows.length -1){
+      parent.insertBefore(rows[indexRow + 1],rows[indexRow]);
+      indexRow++;
+    }
+  }
+}
+
+function addMsg(event) {
   event.preventDefault();
   const inputFrom = document.getElementById('from');
   const inputTo = document.getElementById('to');
+
   const textArea = document.getElementById('message');
 
-  if(!inputFrom.value.length){
+  if (!inputFrom.value.length) {
     alert('O remetente deve ser informado');
-    return;
+    return
   }
 
-  if(!inputTo.value.length){
+  if (!inputTo.value.length) {
     alert('O destinatário deve ser informado');
-    return;
+    return
   }
 
-  // o trim remove os espaços do inicio e do final da string
-  textArea.value = textArea.value.trim();
-
-  if(!textArea.value.length){
-    alert('O texto deve ser informado');
-    return;
+  if (!textArea.value.length) {
+    alert('Insira uma mensagem');
+    return
   }
-
+  
   const message = {
     from: inputFrom.value,
     to: inputTo.value,
-    message: textArea.value,
+    message: textArea.value
   }
-  console.log('...', message)
- 
-  /*
-  const sessionMessages = document.getElementById('section-messages');
 
-  // buscamos uma lista dentro da função, e se ela não existir criamos uma 
+  console.log('->',message);
 
-  let ul = sessionMessages.querySelector('ul')
+  const sectionMessages = document.getElementById('section-messages');
 
-  if(!ul){
+  // Buscamos uma lista não ordenada dentro da seção, para validar
+  // se existe ou não, se não existir, criamos ela
+  let ul = sectionMessages.querySelector('ul');
+
+  if (!ul) {
+    // Criamos uma lista não ordernada
     ul = document.createElement('ul');
-    sessionMessages.appendChild(ul);
-  }
 
-  document.getElementById('form-message').reset();
+    // Adiciona dentro da seção
+    sectionMessages.appendChild(ul);   
+  }
 
   const li = document.createElement('li');
-  li.innerHTML = `De: ${message.from} Para: ${message.to} Mensagem: ${message.message}`;
 
-  ul.appendChild(li)  */
-
-  // Criar uma tabela se ela não existir
-
-  const sessionTable = document.getElementById('section-table');
-
-  let tbody = sessionTable.querySelector('tbody');
-
-  document.getElementById('form-message').reset();
-
-  const tBody = document.getElementById('tbody');
-
-  const tr = document.createElement('tr');
+  // Coloca um conteúdo dento da "li", as crazes são usadas por conta das variáveis 
+  // que importamos do JS    || - Variável sendo importada no HTML
+  //                         V
+  li.innerHTML = `De: ${message.from}Para: ${message.to}Mensagem: ${message.message}`
+  // Coloca um "li" dentro da "ul"
+  ul.appendChild(li);
 
   const tdFrom = document.createElement('td');
-  tdFrom.innerHTML = message.from
-
   const tdTo = document.createElement('td');
-  tdTo.innerHTML = message.to
+  const tdMessage = document.createElement('td')
 
-  const tdMessage = document.createElement('td');
-  tdMessage.innerHTML = message.message;
-
-  tr.appendChild(tdFrom);
-  tr.appendChild(tdTo);
-  tr.appendChild(tdMessage);
+  const tr = document.createElement('tr');
+  const tbody = document.querySelector('tbody');
 
   const tdButtons = document.createElement('td');
 
   const iconEdit = document.createElement('i');
-  iconEdit.setAttribute('class', 'fa-solid fa-pen-to-square');
-  iconEdit.setAttribute('style', 'cursor:pointer');
-
+  iconEdit.setAttribute('title', 'Editar');
+  iconEdit.setAttribute('class', 'fa-solid fa-pencil');
+  iconEdit.setAttribute('style', 'cursor: pointer; margin-inline: 0.5rem');
+  tdButtons.appendChild(iconEdit);
+  
   const iconRemove = document.createElement('i');
-  iconRemove.setAttribute('class', 'fas fa-trash');
-  iconRemove.setAttribute('style', 'cursor:pointer');
+  iconRemove.setAttribute('title', 'Remover');
+  iconRemove.setAttribute('class', 'fa-solid fa-trash');
+  iconRemove.setAttribute('style', 'cursor: pointer; margin-inline: 0.5rem');
+  tdButtons.appendChild(iconRemove);
 
-
-  const iconArrowDowm = document.createElement('i');
-  iconArrowDowm.setAttribute('class', 'fa-solid fa-arrow-down');
-  iconArrowDowm.setAttribute('style', 'cursor:pointer');
-
+  const iconArrowDown = document.createElement('i');
+  iconArrowDown.setAttribute('title', 'Descer posição');
+  iconArrowDown.setAttribute('class', 'fa-solid fa-arrow-down');
+  iconArrowDown.setAttribute('style', 'cursor: pointer; margin-inline: 0.5rem');
+  tdButtons.appendChild(iconArrowDown);
 
   const iconArrowUp = document.createElement('i');
+  iconArrowUp.setAttribute('title', 'Subir posição');
   iconArrowUp.setAttribute('class', 'fa-solid fa-arrow-up');
-  iconArrowUp.setAttribute('style', 'cursor:pointer');
-
- 
-  tdButtons.appendChild(iconArrowDowm);
+  iconArrowUp.setAttribute('style', 'cursor: pointer; margin-inline: 0.5rem');
   tdButtons.appendChild(iconArrowUp);
-  tdButtons.appendChild(iconRemove);
-  tdButtons.appendChild(iconEdit);
-  tr.appendChild(tdButtons);
+  if (editCheck) {
+    const trEdit = document.getElementById(editId);
 
-  // precisamos identificar a linha
-
-  tr.setAttribute('id', `line${countRow}`);
-  countRow += 1
-
-  iconEdit.setAttribute('onclick', `onClickEdit(${tdButtons.parentNode.id});`);
-  iconEdit.setAttribute('title', `Editar`);
-  iconRemove.setAttribute('onclick', `onClickRemove(${tdButtons.parentNode.id})`);
-  iconRemove.setAttribute('title', `remover`);
-  iconArrowDowm.setAttribute('onclick', `onClickDowm(${tdButtons.parentNode.id})`);
-  iconArrowDowm.setAttribute('title', `descer`);
-  iconArrowUp.setAttribute('onclick', `onClickUp(${tdButtons.parentNode.id})`);
-  iconArrowUp.setAttribute('title', `sobir`);
-
-  if(lineEditingInMoment){
-    console.log('Essa linha já existe');
-    const [fromToUpdate, toToUpdate, messageToUpdate] = lineEditingInMoment.childNodes;
-
-    fromToUpdate.innerHTML = message.from;
-    toToUpdate.innerHTML = message.to;
-    messageToUpdate.innerHTML = message.message;
-    lineEditingInMoment = null;
-
+    trEdit.children[0].innerHTML = message.from;
+    trEdit.children[1].innerHTML = message.to;
+    trEdit.children[2].innerHTML = message.message
   }else{
-    tBody.appendChild(tr);
-  }
+    tdFrom.innerHTML = `${message.from}`;
+    tdTo.innerHTML = `${message.to}`;
+    tdMessage.innerHTML = `${message.message}`;
+    
+    tr.appendChild(tdFrom);
+    tr.appendChild(tdTo);
+    tr.appendChild(tdMessage);
 
+    tr.appendChild(tdButtons);
+    tr.setAttribute('id', `line${countRow}`);
+    countRow += 1;
+    tbody.appendChild(tr);
+
+    iconEdit.setAttribute('onclick', `onClickEdit(${tdButtons.parentNode.id});`);
+    iconRemove.setAttribute('onclick', `onClickRemove(${tdButtons.parentNode.id});`);
+    iconArrowDown.setAttribute('onclick', `onClickMoveDown(${tdButtons.parentNode.id});`);
+    iconArrowUp.setAttribute('onclick', `onClickMoveUp(${tdButtons.parentNode.id});`);
+  }
+  
+  document.getElementById('form-message').reset();
 }
 
-buttonAddMessage.addEventListener('click', addMessage);
+buttonAddMessage.addEventListener('click', addMsg);
