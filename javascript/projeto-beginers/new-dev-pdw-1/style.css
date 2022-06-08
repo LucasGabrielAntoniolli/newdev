@@ -1,61 +1,40 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html, boyd {
   height: 100%;
 }
 
 :root {
+  --primary-color: #BB2BFF;
+  --bg-color-primary: #BB2BFF;
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
-  color: white;
-  background-color: rgb(63, 62, 62);
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-main{
-  background-color: rgb(39, 38, 38);
-  height: 90%;
-  width: 60%;
-  border-radius: 2rem;
-  justify-content: center;
-  align-items: center;
+  font-family: 'Fira Code', monospace;
+  height: 100%;
 }
 
 form{
-  padding-top: 10rem;
-  flex-direction: column;
+  background-color: rgb(104, 103, 102);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  height: 30%;
   align-items: center;
 }
 
-h2{
-  color: reds;
-}
-
-label{
-  font-size: 20px;
-}
-
 input{
-  width: 50%;
-  margin-bottom: 1rem;
+  margin: 2rem;
+  width: 40%;
 }
 
-button{
-  color: white;
-  background-color: red;
-  border-radius: 3rem;
-  border: 2px solid black;
-  width: 10rem;
-  height: 2rem;
+#list-section{
+  min-height: 28rem;
+  max-height: 28rem;
+  
 }
