@@ -158,6 +158,4 @@ const addPeople = (event) => {
 
 
 
-
 const botaoDeAdicionar = document.getElementById('btn');
-botaoDeAdicionar.addEventListener('click', addPeople)
