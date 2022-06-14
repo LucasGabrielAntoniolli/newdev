@@ -1,81 +1,89 @@
 *{
-  margin: 0;
-}
-
-:root{
-  font-size: 62.5%;
-}
-
-html, body{
-  height: 100%;
-}
-
-body{
-  font-size: 1.6rem;
-  background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(3, 47, 97));
+    margin: 0;
+  }
+  
+  :root{
+    font-size: 62.5%;
+  }
+  
+  html, body{
+    height: 100%;
+  }
+  
+  body{
+    font-size: 1.6rem;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(3, 47, 97));
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+  }
+  
+  main{
+    height: 80%;
+  }
+  
+  form{
+    flex-direction: column;
+    display: flex;
+    margin-top: 3rem;
+  }
+  
+  button{
   color: white;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-main{
-  height: 80%;
-}
-
-form{
-  flex-direction: column;
-  display: flex;
-  margin-top: 3rem;
-}
-
-button{
-color: white;
-background-color: transparent;
-border: 2px solid white;
-width: 20rem;
-height: 3rem;
-border-radius: 8rem;
-font-family: 'Kdam Thmor Pro', sans-serif;
-margin: 2rem;
-margin-inline: 0;
-}
-
-button:hover{
-  margin: 2rem;
-  color: rgb(7, 70, 165);
-  background-color: white;
-  border: 2px solid rgb(7, 70, 165);
+  background-color: transparent;
+  border: 2px solid white;
   width: 20rem;
   height: 3rem;
   border-radius: 8rem;
-  font-weight: 700;
   font-family: 'Kdam Thmor Pro', sans-serif;
+  margin: 2rem;
   margin-inline: 0;
-}
-
-.input-text{
-  background-color: transparent;
+  }
+  
+  button:hover{
+    margin: 2rem;
+    color: rgb(7, 70, 165);
+    background-color: white;
+    border: 2px solid rgb(7, 70, 165);
+    width: 20rem;
+    height: 3rem;
+    border-radius: 8rem;
+    font-weight: 700;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin-inline: 0;
+  }
+  
+  .input-text{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    width: 20rem;
+  }
+  
+  label{
+    margin: 0.7rem;
+    font-size: 20px;
+  }
+  
+  .section-list{
+  background-color: black;
   color: white;
-  border: 2px solid white;
-  border-radius: 8rem;
-  height: 2rem;
-  margin-bottom: 1rem;
-  width: 20rem;
-}
+  }
+  
+  table, th, td{
+    border: 1px solid white;
+  }
 
-label{
-  margin: 0.7rem;
-  font-size: 20px;
-}
+  .button-list{
+    margin-top: 0;
+  }
 
-.section-list{
-background-color: black;
-color: white;
-}
-
-table, th, td{
-  border: 1px solid white;
-}
+  .button-list:hover{
+    margin-top: 0;
+  }
