@@ -74,6 +74,7 @@ label{
 .section-list{
 background-color: black;
 color: white;
+margin-top: 3rem;
 }
 
 table, th, td{
