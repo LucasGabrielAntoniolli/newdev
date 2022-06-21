@@ -22,7 +22,7 @@ const addRegistration = (event) => {
         brand: document.getElementById('vehicle-brand').value,
         model: document.getElementById('vehicle-model').value,
         year: document.getElementById('vehicle-year').value,
-        units: document.getElementById('vehicle-units').value
+        units: 0
     };
 
     vehicles.push(registration);
@@ -86,12 +86,20 @@ const addRegistration = (event) => {
     });
 };
 
+  
 
-  const onClickUp = (icon) => {
-    
+  if(document.getElementById('enviar-mov')){
+    document.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      const radio = document.querySelector('input[name="a"]:checked');
+      
+     
+
+                      
+
+    });
   };
-
-
 
   const buttonAddRegistration = document.getElementById('send-registration');
 
@@ -99,11 +107,3 @@ const addRegistration = (event) => {
   { 
     buttonAddRegistration.addEventListener('click', addRegistration);
   }
-
-  /*  let iconDown = document.createElement('i');
-      iconDown.setAttribute('class', 'fa-solid fa-minus');
-      iconDown.setAttribute('id', 'icon-down');
-      iconDown.setAttribute('style', 'cursor: pointer; margin-inline: 0.5rem');
-      iconDown.setAttribute('title', 'Diminuir');
-      iconDown.setAttribute('onclick', `onClickDown(this)`);
-      iconDown.setAttribute('number-id', `${index}`);*/

@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body, html{
+  font-size: 1.6rem;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: yellow;
+}
+
+
+table{
+  display: flex;
+  flex-direction: column;
+}
+
+tr{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+td{
+  height: 25rem;
+  width: 33.3%;
+  border: 4px solid yellow;
+  font-size: xx-large;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  margin-top: 3rem;
+  margin-left: 42%;
+  width: 20rem;
+  height: 4rem;
+  background-color: black;
+  color: yellow;
+  border: 4px solid yellow;
+}
