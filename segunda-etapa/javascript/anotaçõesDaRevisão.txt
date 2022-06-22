@@ -1,0 +1,59 @@
+Desenvolvimento web:
+	*Front-end:
+		-html, css, js
+		(html é a linguagem de marcação, css é a linguagem de estilização em cascata, js é linguagem de programação)
+		(html e css dão aparência para a página, e js da interações e funcionalidades com a página e da vida aos elementos)
+
+	Existem servidores provendo recursos podendo ser tanto no foront quanto no back-end (imagens html arquivos de texto audio...).
+A comunicação é feita através de um protocolo, http ou https o segundo tem s por ser mais seguro (criptografia). 
+	JS - Linguagem de programação
+		DOM - Programação orientada a objetos: Classe(possui propriedades/atributos, métodos) Objeto(é a instância de uma classe)
+			
+			exemplo de classe:
+			  carro {
+				cor: 
+				tamanho:
+				modelo:
+				}
+
+ 			exemplo de método/Função: 
+			  function estaAndando(velocidade) {
+				if(velocidade > 0){
+					return true;	
+					}
+				    return false;	
+				} 
+
+			exemplo de objeto:
+			  cor, tamanho, modelo
+			  const carro2 = carro(amarelo, 5, volks)
+
+			Arrays(vetores): Já apremdemos trabalhar com arrays com os seguintes métodos:
+				.forEach: percorre todos as posições do array disparando uma função que recebe 2 parâmetros, 
+			 no primeiro recebe o elemento que está armazenado 'item', e na segunda recebe o indice em que está armazenado 'index'.
+				.push: adiciona elemento ao final do array;
+				.indexOf: procura o indice dentro do array e retorna;
+				.splice: ele remove um ou mais itens de um array de acordo com o parâmetro passado,
+					1° parâmetro: posição inicial. 2° parâmetro: quantos itens serão removidos;
+				.filter: retorna o elemento que satisfaz a condição que é passada dentro da função;
+				.map: retorna um novo vetor, copiando o antigo e alternado o que se pede;
+				.includes: retorna true or false de acordo se for verdadeira ou não á condição passada;
+
+			diferença entre usar:
+			function name () {};   e  const name = () => {} ;
+			(na primeira a função não faz leitura de objs de fora (escopo fechado), ja a segunda lê (escopo aberto))
+
+			Manipulação da DOM: 
+				-Dom é Document Object Model (página);
+				-adcionar eventos dentro da DOM através de iputs, bottons e elementos HTML em geral:
+					addEventListener('click', função de callback);
+				-procurar elementos: seletores(tagName, id, class);
+					getElementById('id') querySelector('primeiro element') querySelectorAll('todos os elements') 
+				-criar elementos HTML:
+					createElement('element'); pai.appendChild(filho) .childNode .parentNode
+				-manipular elementor html, add atributos, add
+					.setAtributte()
+				-Storage: Local Storage
+
+	*Back-end: 
+		
