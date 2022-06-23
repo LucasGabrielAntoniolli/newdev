@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+}
+
+body, html{
+  height: 100%;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 255, 191, 0.308);
+}
+
+div{
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: 33.3%;
+}
+
+div *{
+  margin: 1rem;
+}
+
+section{
+  height: 33.3%;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+main{
+  height: 33.3%;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+li{
+  background-color: black;
+  color: white;
+  width: 50%;
+}
