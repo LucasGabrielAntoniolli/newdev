@@ -3,7 +3,7 @@
 
 function checkStatusMemory(){
   const os = require('os');
-  console.log(os.platform()); // retorna o sistema operacional que está sendo executado o node
+  console.log(os.platform()); 
 
   const mem = parseInt(os.freemem() / 1024 / 1024);
   
