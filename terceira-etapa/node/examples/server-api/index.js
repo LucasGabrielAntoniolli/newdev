@@ -8,6 +8,17 @@ const getUsers = (request, response) => {
   const { name, lastName, age, remove } = URL.parse(request.url, true).query;
   let message = '';
 
+  response.writeHead(200, {
+    'Access-Control-Allow-Origin': '*'
+  })
+
+  /*if(!name){
+         response.writeHead(400, {
+        'Access-Control-Allow-Origin': '*'  
+    });
+      return response.end('Não foi informado o nome');
+  }*/
+
   if (name) {    
     const user = {
       name, lastName, age
