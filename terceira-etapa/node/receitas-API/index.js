@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
   };
 
   if(remove){
-    receitas = receitas.filter(receitas => receitas ? titulo !== titulo);
+    receitas = receitas.filter(receitas => receitas ?. titulo !== titulo);
   } else {
     receitas.push({titulo});
   };
