@@ -19,7 +19,6 @@ routes.post('/authors', AuthorController.create);
 routes.get('/authors/:id', AuthorController.getById);
 routes.delete('/authors/:id', AuthorController.deleteById);
 routes.put('/authors/:id', AuthorController.put);
-routes.patch('/authors/:id', AuthorController.patch);
 
 
 //BOOKS
@@ -32,6 +31,6 @@ routes.post('/books', BooksControllers.create);
 routes.get('/books/:id', BooksControllers.getById);
 routes.delete('/books/:id', BooksControllers.deleteById);
 routes.put('/books/:id', BooksControllers.put);
-routes.patch('/books/:id', BooksControllers.patch);
+
 
 module.exports = routes;
