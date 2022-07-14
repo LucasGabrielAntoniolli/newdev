@@ -5,7 +5,6 @@ exports.findAll = async (request, response) => {
   
   try{
     const sql = await database.select('*').from('authors');
-    console.log(banana);
     return response.status(200).send({authors: sql});
 
   } catch (error) {
@@ -66,7 +65,7 @@ exports.deleteById = async (request, response) => {
     
     console.log('author ENCONTRADO', previousAuthor);
 
-    await database.delete({ name: previousAuthor.name }).from('authors').where({ id: previousAuthor.id });
+    await database.delete().from('authors').where({ id: previousAuthor.id });
 
 
     return response.status(200).send({ status: 'Registro deletado com sucesso', data: previousAuthor });

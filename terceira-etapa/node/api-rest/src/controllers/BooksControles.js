@@ -1,10 +1,24 @@
 const database = require('../databases/knex');
+const logger = require('../utils/logger');
 
 exports.findAll = async (request, response) => {
  
   try{
-    const sql = await database.select('*').from('books');
+    const sql = await database
+    .select(
+      ['books.id', 'books.title', 'authors.name as author Name']
+    )
+    .from('books')
+    .innerJoin('authors', 'authors.id', 'books.authorId');
   
+    sql.forEach(author => {
+        console.log('--> ', author['author Name']);
+        // camelCase
+        // snake_case
+        // PascalCase
+        // kebab-case
+      });
+
     return response.status(200).send({authors: sql});
 
   } catch (error) {
@@ -65,7 +79,7 @@ exports.deleteById = async (request, response) => {
     
     console.log('books ENCONTRADO', previousBooks);
 
-    await database.delete({ name: previousBooks.name }).from('books').where({ id: previousBooks.id });
+    await database.delete().from('books').where({ id: previousBooks.id });
 
 
     return response.status(200).send({ status: 'Registro deletado com sucesso', data: previousBooks });
