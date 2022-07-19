@@ -8,12 +8,18 @@ exports.up = function(knex) {
     table.string('title');
     table.string('description');
     table.string('link')
-    table.integer('instructorId')
+    table.integer('teacherId')
     .unsigned()
     .notNullable()
     .references('id')
-    .inTable('instructor')
+    .inTable('teachers')
     .onDelete('CASCADE');
+    table.integer('courseId')
+      .unsigned()
+      .notNullable()
+      .references('id')
+      .inTable('courses')
+      .onDelete('CASCADE');
   });
 };
 

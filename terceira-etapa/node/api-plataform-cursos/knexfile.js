@@ -6,7 +6,6 @@ module.exports = {
     },
     pool: {
       afterCreate: function(connection, cb){
-        console.log('criando database')
         connection.run('PRAGMA foreign_keys = ON', cb)
       }
     },
